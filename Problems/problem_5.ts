@@ -1,15 +1,15 @@
 // Write a generic function getProperty that takes an object and a property name as arguments and returns the property value. Add a constraint to ensure the property name exists on the object.
 
-interface Animal {
-    specis: string;
+interface Player {
+    role: string;
     name: string;
     age: number;
 
 }
 
-const animal: Animal = {
-    specis: 'Dog',
-    name: 'Lili',
+const animal: Player = {
+    role: 'All Rounder',
+    name: 'Mushfiqur',
     age: 5
 }
 

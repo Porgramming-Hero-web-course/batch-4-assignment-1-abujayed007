@@ -4,7 +4,7 @@ Type Guards in TypeScript are ways to help the TypeScript compiler understand wh
 Let’s look at different types of type guards and examples that demonstrate how they help.
 
 
-1. _typeof Type Guard_
+1. **typeof Type Guard**
 Purpose: Used to check the type of primitive values (e.g., string, number, boolean).
 
 Example:
@@ -20,7 +20,7 @@ function add(a: number | string, b: number | string): number | string {
 console.log(add(10, 20));  
 console.log(add("Hello", "World")); 
 Why it's useful: Without typeof, TypeScript wouldn't know if a and b are numbers or strings, and trying to add a string and a number would give an error. Using typeof, we can narrow the type and safely perform the operation.
-2. _instanceof Type Guard_
+2**instanceof Type Guard**
 Purpose: Used to check if an object is an instance of a class.
 
 Example:
@@ -48,7 +48,7 @@ const cat = new Cat();
 speak(dog); 
 speak(cat); 
 Why it's useful: instanceof helps TypeScript know which type you're dealing with when it's an object (either a Dog or a Cat). Without it, TypeScript would be unsure which methods are safe to call on the animal.
-3. _in Type Guard_
+3**in Type Guard**
 Purpose: Checks if an object has a certain property. Useful when objects have different shapes.
 
 Example:
@@ -76,7 +76,7 @@ const bird: Bird = { fly: () => console.log("Bird flying") };
 move(fish); 
 move(bird); 
 Why it's useful: The in operator lets TypeScript know which type you're dealing with based on the presence of specific properties, so you can safely access those properties.
-4. _Custom Type Guards_
+4**Custom Type Guards**
 Purpose: A custom function that narrows the type using your own conditions.
 
 Example:
@@ -111,7 +111,7 @@ printPersonDetails(emp);
 printPersonDetails(contractor); 
 Why it's useful: The isEmployee function acts as a custom type guard, letting TypeScript know that, inside the if block, person is definitely an Employee (because it has the role property). This allows safe access to role without type errors.
 
-5. _Literal Type Guard_
+5**Literal Type Guard**
 Purpose: Directly compares a value to a specific literal value ("pending", "approved", etc.).
 
 Example:
